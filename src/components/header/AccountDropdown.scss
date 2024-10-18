@@ -1,0 +1,56 @@
+@use "../../common/styles/variables.scss";
+
+.account-dropdown-menu {
+  position: absolute;
+  right: 5px;
+  top: 42px;
+  background-color: #fff;
+  padding: 6px;
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 4px;
+  max-width: 240px;
+  width: 100%;
+  z-index: 100;
+
+  &-item {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 14px 8px;
+    border-radius: 4px;
+
+    &:hover {
+      color: variables.$color-blue;
+      background-color: #00a8ca18;
+    }
+
+    svg {
+      color: rgb(110, 110, 110);
+      width: 20px;
+      height: 20px;
+    }
+  }
+  &-item:nth-child(6) {
+    position: relative;
+    &::before {
+      content: "";
+      width: calc(100% + 12px);
+      height: 1px;
+      background-color: rgb(221, 221, 221);
+      position: absolute;
+      left: -6px;
+      top: 0;
+    }
+    &::after {
+      content: "";
+      width: calc(100% + 12px);
+      height: 1px;
+      background-color: rgb(221, 221, 221);
+      position: absolute;
+      left: -6px;
+      bottom: 0;
+    }
+  }
+}

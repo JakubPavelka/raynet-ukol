@@ -1,0 +1,37 @@
+@use "../../common/styles/variables.scss";
+
+.search {
+  position: relative;
+  margin-block: 24px;
+  max-width: 202px;
+
+  @media (max-width: 400px) {
+    max-width: unset;
+  }
+  input {
+    outline: none;
+    background-color: #dadada;
+    border: none;
+    padding: 12px 32px 12px 12px;
+    border-radius: 20px;
+    color: variables.$color-text;
+    font-family: "Roboto", sans-serif;
+    &::placeholder {
+      color: gray;
+      font-family: "Roboto", sans-serif;
+    }
+
+    @media (max-width: 400px) {
+      width: 100%;
+    }
+  }
+
+  svg {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: gray;
+    cursor: pointer;
+  }
+}

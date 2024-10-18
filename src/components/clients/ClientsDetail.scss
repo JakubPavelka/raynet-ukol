@@ -1,0 +1,59 @@
+@use "../../common/styles/variables.scss";
+
+.client-details {
+  .flex-top {
+    display: flex;
+
+    .kategorie-details {
+      span {
+        padding: 3px 12px;
+        border-radius: 20px;
+        margin-right: 20px;
+      }
+    }
+
+    &-2 {
+      display: flex;
+
+      div {
+        margin-right: 6px;
+      }
+    }
+  }
+
+  h3 {
+    font-size: 38px;
+    margin-block: 8px;
+  }
+
+  .no-details {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .adresa-detail {
+    font-size: 17.5px;
+    .detail-ic {
+      margin-bottom: 14px;
+      padding-bottom: 0;
+    }
+    p {
+      padding-bottom: 3px;
+    }
+    a {
+      text-decoration: underline;
+      color: variables.$color-blue;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .detail-info {
+    margin-block: 14px;
+  }
+}

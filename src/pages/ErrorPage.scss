@@ -1,0 +1,17 @@
+.error-page {
+  display: flex;
+  align-items: center;
+  margin-top: 80px;
+  flex-direction: column;
+  img {
+    width: 240px;
+    height: auto;
+    margin-top: 80px;
+    user-select: none;
+  }
+
+  p {
+    font-size: 24px;
+    margin-block: 24px;
+  }
+}

@@ -1,0 +1,71 @@
+@use "../../common/styles/variables.scss";
+@use "../../common/styles/mixins.scss";
+
+.overlay {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.404);
+  width: calc(100% + 74px);
+  height: 100vh;
+  left: -74px;
+  top: 0;
+  z-index: 1001;
+  .notifications {
+    position: absolute;
+    right: 181px;
+    top: 8px;
+    background-color: #fff;
+    max-width: 500px;
+    width: 100%;
+    padding: 4px;
+    border-radius: 6px 16px 6px 6px;
+
+    @include mixins.MediaQueries(medium-767px) {
+      left: calc(50% + 37px);
+      transform: translateX(-50%);
+      right: auto;
+      max-width: 450px;
+    }
+    @media (max-width: 480px) {
+      max-width: 400px;
+    }
+    @media (max-width: 420px) {
+      max-width: 350px;
+    }
+
+    &-bell {
+      width: max-content;
+      height: 26px;
+      margin-bottom: 8px;
+      margin-left: auto;
+      cursor: pointer;
+      svg {
+        color: #fff;
+        background-color: variables.$color-blue;
+        width: 26px;
+        height: 26px;
+        padding: 3px;
+        border-radius: 50%;
+        margin-left: auto;
+      }
+    }
+
+    h4 {
+      font-size: 16px;
+      padding-left: 24px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid rgb(224, 224, 224);
+    }
+
+    &-text {
+      max-width: 300px;
+      margin: 0 auto;
+      text-align: center;
+      margin-block: 32px;
+
+      span {
+        font-weight: 700;
+        font-size: 18px;
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@use "../common/styles/variables.scss";
+@use "../common/styles/mixins.scss";
+
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  img {
+    width: 240px;
+    height: auto;
+    margin-top: 80px;
+    user-select: none;
+
+    @include mixins.MediaQueries(medium-767px) {
+      width: 120px;
+    }
+  }
+
+  h1 {
+    font-size: 64px;
+    margin-block: 24px;
+
+    @include mixins.MediaQueries(medium-767px) {
+      font-size: 32px;
+    }
+  }
+}

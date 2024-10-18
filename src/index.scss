@@ -1,0 +1,31 @@
+@use "./common/styles/mixins.scss";
+@use "./common/styles/variables.scss";
+
+html {
+  color: variables.$color-text;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #f2f4f6;
+}
+.app {
+  display: flex;
+
+  @media (max-width: 1720px) {
+    height: 100vh;
+  }
+}
+.outlet-nav-wrapper {
+  width: 100%;
+}
+a {
+  text-decoration: none;
+}
